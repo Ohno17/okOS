@@ -9,6 +9,15 @@
 # replit
 *.replit
 *.nix
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 # spesif
 os-dev-main\
+>>>>>>> origin/main
+=======
+
+# spesif
+os-dev-main\
+>>>>>>> origin/main
