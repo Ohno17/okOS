@@ -7,3 +7,5 @@ A simple OS for fun.
 Use your versions of the commands in the file. Change the file extension to your supported file type.
 ## Nix
 Use the nix file to download the emulator (QEMU), compiler (NASM) and gcc.
+## Raw download
+<a href="bootloader.flp">Link to floppy file</a>
