@@ -8,4 +8,9 @@ ld -T"link.ld"
 
 cat bootloader.bin kernel.bin > bootloader.flp
 
-qemu-system-x86_64 -drive file=bootloader.flp,format=raw
+rm bootloader.bin
+rm ExtendedProgram.o
+rm kernel.bin
+rm Kernel.o
+
+qemu-system-x86_64 -fda bootloader.flp
