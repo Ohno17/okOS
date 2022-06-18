@@ -1,10 +1,12 @@
-// C++ Kernel entrypoint (really it is C)
-#include "TextPrint.cpp"
+// C++ Kernel entrypoint (C)
+#include "../Header/TextPrint.h"
 
 extern "C" void _start(){
 
-	SetCursorPos(PositionFromCoords(1,0));
-	PrintString("Hello, World!\n\rThis is a new line!\n\r");
-  PrintString(HexToString(0x1234abcd));
+	SetCursorPosition(PositionFromCoords(0, 0));
+	PrintString("Hello World\n\rThis is a New Line!\n\r");
+	PrintString(HexToString(0x1234abcd));
+	PrintString("\n\r");
+	PrintString(HexToString("HI"));
 	return;	
 }
