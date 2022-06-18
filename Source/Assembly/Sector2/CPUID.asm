@@ -29,7 +29,7 @@ DetectLongMode:
 	ret
 
 NoLongMode:
-	hlt ; No Long Mode Support'
+	hlt ; No long mode support
 
 NoCPUID:
-	hlt ; No CPUID SUPPORT
+	hlt ; No CPUID support

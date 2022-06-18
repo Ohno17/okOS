@@ -5,13 +5,13 @@ ReadDisk:
 
 	mov ah, 0x02
 	mov bx, PROGRAM_SPACE
-	mov al, 32 			;Number of sectors read
-	mov dl, [BOOT_DISK] ;daonde esta lendo
-	mov ch, 0x00		; cylinder 0
+	mov al, 64 			;number of sectors to read
+	mov dl, [BOOT_DISK] ; pointer of boot disk
+	mov ch, 0x00		; Cilynder 0
 	mov dh, 0x00		; head 0 
-	mov cl, 0x02		; sector 2
+	mov cl, 0x02		; Sector 2
 	
-	int 0x13 ; disc read BIOS interupt
+	int 0x13			; Disk read interupt
 	jc DiskReadFailed ; carry flag
 	ret
 
