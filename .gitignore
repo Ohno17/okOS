@@ -9,3 +9,6 @@
 # replit
 *.replit
 *.nix
+
+# spesif
+os-dev-main\
