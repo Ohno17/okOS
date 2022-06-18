@@ -5,3 +5,7 @@
 
 # c
 *.o
+
+# replit
+*.replit
+*.nix
