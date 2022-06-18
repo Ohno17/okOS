@@ -8,9 +8,12 @@ ld -T"link.ld"
 
 cat bootloader.bin kernel.bin > bootloader.flp
 
+<<<<<<< HEAD
 rm bootloader.bin
 rm ExtendedProgram.o
 rm kernel.bin
 rm Kernel.o
 
+=======
+>>>>>>> origin/new
 qemu-system-x86_64 -fda bootloader.flp

@@ -28,7 +28,7 @@ uint_16 PositionFromCoords(uint_8 x, uint_8 y){
 	return y * VGA_WIDTH + x;	
 }
 
-/* Print a string */
+/* Print */
 void PrintString(const char* str){
 	uint_8* charPtr = (uint_8*)str;
 	uint_16 index = CursorPosition;
@@ -52,7 +52,7 @@ void PrintString(const char* str){
 	SetCursorPosition(index);
 }
 
-/* Hex to string */
+/* hex to string */
 
 char hexToStringOutput[128]; //Buffer
 template<typename T>

@@ -6,7 +6,7 @@ jmp EnterProtectedMode
 
 EnterProtectedMode:
 	call EnableA20
-	cli  ; Disable interupts
+	cli  ; disable interupts
 	lgdt [gdt_descriptor]
 	mov eax, cr0
 	or eax, 1
@@ -46,10 +46,13 @@ StartProtectedMode:
 
 Start64Bit:
 	mov edi, 0xb8000
-	mov rax, 0x1f201f201f201f20
+
+	;mov rax, 0x0f200f200f200f20 ; BlackScreen
+	mov rax, 0x1f201f201f201f20 ; blueScreen
+
 	mov ecx, 500 
 	rep stosq
-  call _start
+	call _start
 	jmp $
 
-times 2048-($-$$) db 0 ; Pad with zeros
+times 2048-($-$$) db 0 ; pad zeros 4 sectors
