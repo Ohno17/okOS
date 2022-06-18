@@ -13,3 +13,5 @@ Make sure to have an emulator like QEMU and a compiler like NASM.\
 You need GCC too.
 ## Nix
 You can use the Nix file to download the emulator (QEMU), compiler (NASM) and gcc. (Download dependancies with Nix)
+## Raw download
+<a href="bootloader.flp">Link to floppy file</a>
