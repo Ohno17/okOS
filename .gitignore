@@ -1,0 +1,11 @@
+# machine
+*.bin
+*.tmp
+*.flp
+
+# c
+*.o
+
+# replit
+*.replit
+*.nix
