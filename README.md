@@ -6,6 +6,10 @@ Run with this command:
 ```sh
 sh compileasm.sh
 ```
+Use the debug option to contine even if files are missing:
+```sh
+sh compileasm.sh -d
+```
 #### Other:
 Use your versions of the commands in the file. Change the file extension to your supported file type.
 ## Dependencies

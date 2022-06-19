@@ -16,5 +16,4 @@ unsigned char inb(unsigned short port, unsigned char val){
 	: "Nd"(port));
 	
 	return returnVal;
-
 }

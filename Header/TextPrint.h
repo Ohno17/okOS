@@ -8,7 +8,7 @@
 uint_16 CursorPosition; 
 
 // Position is a index for 0 to the end of video memory
-void SetCursorPosition(uint_16 position){
+void SetCursorPosition(uint_16 position) {
 	
 	outb(0x3D4, 0x0F);	
 	outb(0x3D5, (uint_8)(position & 0XFF));
@@ -57,16 +57,14 @@ void PrintString(const char* str){
 char hexToStringOutput[128]; //Buffer
 template<typename T>
 
-const char* HexToString(T value){
+const char* HexToString (T value) {
 
 	T* valPtr = &value;
 	uint_8* ptr;
 	uint_8 temp;
 	uint_8 size = (sizeof(T)) * 2 - 1;
-	uint_8 i;
-	
-	for(i = 0; i < size; i++){
-		
+	volatile uint_8 i;
+	for(i = 0; i < size; i++) {
 		ptr = ((uint_8*)valPtr + i);
 		temp = ((*ptr & 0xF0) >> 4);
 		hexToStringOutput[size - (i*2+1)] = temp + (temp > 9 ? 55 : 48);
