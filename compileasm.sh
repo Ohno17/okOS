@@ -12,9 +12,7 @@ nasm ./Source/Assembly/Sector2/ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
 
 gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "./Source/Kernel.cpp" -o "Kernel.o"
 
-ld -T"link.ld"
-
-if [ $OPTS = 1 ]; then
+if [ $OPTS = 0 ]; then
   FILE=bootloader.bin
   if [ ! -f "$FILE" ]; then
     echo "Assembly build error. Bootloader.bin does not exist."
@@ -26,13 +24,14 @@ if [ $OPTS = 1 ]; then
 
   FILET=kernel.bin
   if [ ! -f "$FILET" ]; then
-    echo "C++ build error. Kernel.bin does not exist"
+    echo "C build error. Kernel.bin does not exist"
     rm bootloader.bin
     rm ExtendedProgram.o
-    rm Kernel.o
     exit 1
   fi
 fi
+
+ld -T"link.ld"
 
 cat bootloader.bin kernel.bin > bootloader.flp
 

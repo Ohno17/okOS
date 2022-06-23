@@ -23,13 +23,13 @@ void SetCursorPosition(uint_16 position) {
 	
 }
 
-uint_16 PositionFromCoords(uint_8 x, uint_8 y){
+uint_16 PositionFromCoords(uint_8 x, uint_8 y) {
 
 	return y * VGA_WIDTH + x;	
 }
 
 /* Print */
-void PrintString(const char* str){
+void PrintString(const char* str) {
 	uint_8* charPtr = (uint_8*)str;
 	uint_16 index = CursorPosition;
 	while(*charPtr != 0){
@@ -52,28 +52,8 @@ void PrintString(const char* str){
 	SetCursorPosition(index);
 }
 
-/* hex to string */
-
-char hexToStringOutput[128]; //Buffer
-template<typename T>
-
-const char* HexToString (T value) {
-
-	T* valPtr = &value;
-	uint_8* ptr;
-	uint_8 temp;
-	uint_8 size = (sizeof(T)) * 2 - 1;
-	volatile uint_8 i;
-	for(i = 0; i < size; i++) {
-		ptr = ((uint_8*)valPtr + i);
-		temp = ((*ptr & 0xF0) >> 4);
-		hexToStringOutput[size - (i*2+1)] = temp + (temp > 9 ? 55 : 48);
-
-		temp = ((*ptr & 0x0F));
-		hexToStringOutput[size - (i*2+0)] = temp + (temp > 9 ? 55 : 48);
-	}
-
-	hexToStringOutput[size + 1] = 0;
-
-	return hexToStringOutput;	
+char* HexToChar(int val) {
+  char *string;
+  string = "hello need to find out how to convert hex to char*\n\rNow goodbye for now.\n\r(:";
+  return string;
 }
