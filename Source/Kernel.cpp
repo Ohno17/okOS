@@ -5,5 +5,6 @@ extern "C" void _start() {
 
 	SetCursorPosition(PositionFromCoords(0, 0));
 	PrintString("Hello World\n\rThis is a New Line!\n\r");
+  PrintString(HexToChar(0x50));
 	return;
 }
