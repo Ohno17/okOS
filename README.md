@@ -17,3 +17,4 @@ Make sure to have an emulator like QEMU and a compiler like NASM.\
 You need GCC too.
 ## Nix
 You can use the Nix file to download the emulator (QEMU), compiler (NASM) and gcc. (Download dependancies with Nix)
+Use the nix file to download the emulator (QEMU), compiler (NASM) and gcc.
