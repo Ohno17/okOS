@@ -1,11 +1,3 @@
 run = "sh ./compileasm.sh -d"
-entrypoint = "Source/Kernel.cpp"
+entrypoint = "./Source/Kernel.cpp"
 hidden = ["link.ld", "bootloader.flp", ".gitignore"]
-
-[languages.rust]
-# The glob pattern to match files for this programming language
-pattern = "**/*.asm"
-
-    # LSP configuration for code intelligence
-    [languages.rust.languageServer]
-    start = ["rust-analyzer"]

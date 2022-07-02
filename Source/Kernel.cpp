@@ -3,15 +3,14 @@
 
 extern "C" void _start() {
 
-	ksetcursorpos(kpostocoords(1, 1));
+	ksetcursorpos(kcoordstoindex(1, 1));
 	kprintstr("Hello, World!");
-  ksetcursorpos(kpostocoords(1, 2));
+  ksetcursorpos(kcoordstoindex(1, 2));
   kprintstr("This is a New Line!");
-  ksetcursorpos(kpostocoords(1, 3));
+  ksetcursorpos(kcoordstoindex(1, 3));
   kprintstr("Wow a integer! Here it is: ");
   kprintstr(itoa(10, 10));
-  ksetcursorpos(kpostocoords(1, 4));
-  char str[5];
-  kprintstr(kitostr(1234, &str[0]));
+  ksetcursorpos(kcoordstoindex(1, 4));
+  kprintstr(kitochar(412873872));
 	return;
 }

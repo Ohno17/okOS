@@ -10,7 +10,6 @@ uint_16 CursorPosition;
 
 // Position is a index for 0 to the end of video memory
 void ksetcursorpos(uint_16 position) {
-	
 	outb(0x3D4, 0x0F);	
 	outb(0x3D5, (uint_8)(position & 0XFF));
 	outb(0x3D4, 0x0E);
@@ -22,7 +21,7 @@ void ksetcursorpos(uint_16 position) {
 	if(CursorPosition < 0) CursorPosition = 0;
 }
 
-uint_16 kpostocoords(uint_8 x, uint_8 y) {
+uint_16 kcoordstoindex(uint_8 x, uint_8 y) {
 
 	return y * VGA_WIDTH + x;	
 }
