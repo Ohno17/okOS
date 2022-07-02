@@ -40,4 +40,4 @@ rm ExtendedProgram.o
 rm kernel.bin
 rm Kernel.o
 
-qemu-system-x86_64 -fda bootloader.flp
+qemu-system-x86_64 -drive format=raw,file=bootloader.flp,index=0,if=floppy
