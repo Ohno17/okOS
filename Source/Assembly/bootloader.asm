@@ -7,8 +7,8 @@ call ReadDisk
 
 jmp PROGRAM_SPACE 
 
-%include "./Source/Assembly/Sector1/DiscRead.asm"
-%include "./Source/Assembly/Sector1/print.asm"
+%include "./Source/Assembly/DiscRead.asm"
+%include "./Source/Assembly/print.asm"
 
 times 510-($-$$) db 0
 
