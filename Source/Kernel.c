@@ -1,8 +1,9 @@
 // Kernel
-#include "../Header/TextPrint.h"
-#include "../Header/KBDScanset.h"
+#include "IDT.c"
 
 void _start() {
-  ksetcursorpos(kcoordstoindex(0, 1));
+  ksetcursorpos(0);
+  kprintchar('s');
+  write_serial('a'); // For debug
 	return;
-}  
+}

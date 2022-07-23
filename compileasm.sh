@@ -44,5 +44,5 @@ rm Kernel.o
 
 echo "Removed all object and bin files... cleaned."
 echo "Running..."
-qemu-system-x86_64 -drive format=raw,file=bootloader.flp,index=0,if=floppy
+qemu-system-x86_64 -drive format=raw,file=bootloader.flp,index=0,if=floppy -serial stdio
 echo "Stopped."

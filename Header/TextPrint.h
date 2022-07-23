@@ -98,9 +98,11 @@ void kprintfchar(char chr, uint_8 color) {
     case 0: break;
     case 10:
 			CursorPosition += VGA_WIDTH;
+      ksetcursorpos(CursorPosition);
 		  break;
 		case 13:
 			CursorPosition -= CursorPosition % VGA_WIDTH;
+      ksetcursorpos(CursorPosition);
 		  break;
     default:
       *(VGA_MEMORY + CursorPosition * 2) = chr;
@@ -115,9 +117,11 @@ void kprintchar(char chr) {
     case 0: break;
     case 10:
 			CursorPosition += VGA_WIDTH;
+      ksetcursorpos(CursorPosition);
 		  break;
 		case 13:
 			CursorPosition -= CursorPosition % VGA_WIDTH;
+      ksetcursorpos(CursorPosition);
 		  break;
     default:
       *(VGA_MEMORY + CursorPosition * 2) = chr;
