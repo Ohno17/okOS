@@ -22,7 +22,7 @@ EnableA20:
 [bits 32]
 
 %include "./Source/Assembly/CPUID.asm"
-%include "./Source/Assembly/SimplePaging.asm"
+%include "./Source/Assembly/paging.asm"
 
 StartProtectedMode:
 	mov ax, dataseg
@@ -42,8 +42,6 @@ StartProtectedMode:
 	jmp codeseg:Start64Bit 
 
 [bits 64]
-
-%include "./Source/Assembly/IDT.asm"
 [extern _start]
 
 Start64Bit:

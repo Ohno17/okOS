@@ -1,9 +1,12 @@
 // Kernel
-#include "IDT.c"
+#include "/home/runner/okOS/Driver/Serial.h"
+#include "/home/runner/okOS/Header/TextPrint.h"
 
 void _start() {
   ksetcursorpos(0);
-  kprintchar('s');
-  write_serial('a'); // For debug
+  kprintstr("Welcome to this blue screen. Forever.\n\rHello, world!");
+  serialoutstr("\n\rHello outside world!");
+  // For debug, the serial port redirects to our console.
+  // Usually, the serial port goes to a physical port on a computer.
 	return;
 }

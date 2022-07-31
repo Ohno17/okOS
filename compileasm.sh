@@ -7,9 +7,9 @@ case $OPTS in
     OPTS=0 ;;
 esac
 
-nasm ./Source/Assembly/bootloader.asm -f bin -o bootloader.bin
+nasm ./Source/Assembly/boot.asm -f bin -o bootloader.bin
 
-nasm ./Source/Assembly/ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
+nasm ./Source/Assembly/extended.asm -f elf64 -o ExtendedProgram.o
 
 gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "./Source/Kernel.c" -o "Kernel.o"
 
